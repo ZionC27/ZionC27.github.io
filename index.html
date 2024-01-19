@@ -11,7 +11,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f0f0f0;
+      background-color: #ececec; /* Grey background color */
     }
 
     .container {
@@ -49,9 +49,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 24px;
+      font-size: 30px; /* Increased font size */
       font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Larger text shadow */
       pointer-events: none;
       transition: opacity 0.3s ease;
       opacity: 0;
@@ -66,7 +66,7 @@
 <body>
   <div class="container">
     <div class="cs-section" onclick="redirectToCS()">
-      <img src="images/fj.png" alt="Computer Science Image">
+      <img src="images/comp.png" alt="Computer Science Image">
       <div class="image-text">Computer Science</div>
     </div>
     <div class="photo-section" onclick="redirectToPhotography()">
