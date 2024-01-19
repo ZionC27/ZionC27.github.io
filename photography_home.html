@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <title>Photography Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      background-color: #f0f4f4;
+      padding: 70px 20% 0; /* Top padding increased, left and right padding, no bottom padding */
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0; /* Adjusted top and bottom padding */
+    }
+
+    .logo img {
+      /* Styles for the logo image */
+      max-height: 100px; /* Adjust the maximum height as needed */
+    }
+
+    .nav-options {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-options a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px; /* Adjust font size as needed */
+      letter-spacing: 2px; /* Adjust letter spacing as needed */
+      position: relative;
+    }
+
+    .nav-options a::before {
+      /* Pseudo-element for the underline */
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px; /* Adjust the distance from the text */
+      width: 100%;
+      height: 3px; /* Adjust thickness as needed */
+      background-color: white; /* White underline color */
+      transition: transform 0.3s ease; /* Smooth transition effect */
+      transform-origin: right; /* Set the transform origin to the right */
+      transform: scaleX(0); /* Initially invisible */
+    }
+
+    .nav-options a:hover::before {
+      transform-origin: left; /* Change transform origin on hover */
+      transform: scaleX(1); /* Make the line visible on hover */
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc; /* Thin line color */
+      margin-top: 30px; /* Lower position for the line */
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/0.png" alt="Logo">
+    </div>
+    <div class="nav-options">
+      <a href="#">Home</a>
+      <a href="#">Street Photography</a>
+      <a href="#">Architecture</a>
+      <a href="#">Portrait</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+  <!-- Rest of your website content goes here -->
+
+</body>
+</html>
