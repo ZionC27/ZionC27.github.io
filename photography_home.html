@@ -11,14 +11,14 @@
       margin: 0;
       font-family: 'Source Sans 3', sans-serif;
       background-color: #f0f4f4;
-      padding: 40px 15% 0; /* Top padding , left and right padding, no bottom padding */
+      padding: 40px 20% 0; /* Top padding , left and right padding, no bottom padding */
     }
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0; /* Adjusted top and bottom padding */
+      padding: 5px 0; /* Adjusted top and bottom padding */
     }
 
     .logo img {
@@ -66,8 +66,56 @@
       background-color: #ccc; /* Thin line color */
       margin-top: 30px; /* Lower position for the line */
     }
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .slider img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 10px;
+      transition: opacity 1s ease; /* Smooth transition effect */
+    }
+
+    .slider img:last-child {
+      margin-right: 0; /* Remove margin from the last image */
+    }
+
+    .instagram-button {
+            margin-top: 20px; /* Add margin-top to create space before the Instagram button */
+        }
+
   </style>
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // Your JavaScript code here
+      let currentIndex = 0;
+      const images = [
+          'images/tlb.jpg',
+          'images/fj.png',
+          'images/bus.jpg',
+          'images/a1.jpg',
+          'images/b.jpg',
+          'images/mt.jpg'
+      ];
+
+      function showNextImage() {
+          const slider = document.querySelector('.slider');
+          if (slider) {
+              slider.innerHTML = `<img src="${images[currentIndex]}" alt="Slide ${currentIndex + 1}">`;
+              currentIndex = (currentIndex + 1) % images.length;
+              setTimeout(showNextImage, 4500); 
+          }
+      }
+
+      showNextImage(); // Start the image slider
+  });
+
+</script>
 <body>
   <div class="navbar">
     <div class="logo">
@@ -78,13 +126,19 @@
       <a href="#">Street</a>
       <a href="#">Architecture</a>
       <a href="#">Portrait</a>
-      <a href="#">Contact</a>
+      <a href="https://www.instagram.com/ch__photoz/">Contact</a>
     </div>
   </div>
 
   <div class="line"></div>
 
-  <!-- Rest of your website content goes here -->
+  <div class="slider"></div>
+
+  <div class="instagram-button">
+    <a href="https://www.instagram.com/ch__photoz/" target="_blank">
+        <img src="images/ig.png" alt="Instagram" width="30" height="30">
+    </a>
+</div>
 
 </body>
 </html>
